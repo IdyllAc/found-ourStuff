@@ -1,0 +1,278 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+ img {
+    display:block;
+    max-width: 100%;
+    height: 18rem;
+}
+ 
+
+
+/* UTILITY CLASSES */
+.nowrap {
+    white-space: nowrap;
+}
+/* GENERAL STYLE */
+html {
+    scroll-behavior: smooth;
+} 
+
+body {
+    background-color: #475569;  
+    font-family: 1.5rem "Nunito" sans-serif;
+     min-height: 100vh;
+    /* background-image:-webkit-linear-gradient(skyblue, whitesmoke,lime, orange, pink, bisque, skyblue, whitesmoke,lime, orange, bisque, skyblue, whitesmoke,lime, orange);  */
+    display: flex;
+    flex-direction:row;
+    gap: 30px;
+   
+}
+
+.profile-pic-figure {
+    width: 100%; 
+    color: rebeccapurple; 
+    text-decoration: underline lime;
+    background-color: bisque;
+}
+
+.profile-pic-figure img { 
+    width: 223px;
+     height:auto;
+}
+ header, footer {
+    position: sticky;
+    background-color: rebeccapurple; 
+    color: whitesmoke ;
+    text-align: center;
+} 
+
+header {
+    top: 0;
+}
+
+nav {
+    background: #fff;
+    padding: 0.4rem;
+    border-bottom: 2px solid #000;
+    font-weight:bold;
+    justify-content: space-evenly;
+}
+
+/* nav a:link,
+nav a, nav a:visited  */
+           =
+nav a:any-link {
+    color: #000;
+}
+
+/* nav a:hover, 
+nav a:focus */
+
+nav :is(a:hover, a:focus) {
+    color: hsla(0, 0%, 20%, 0.6);
+}
+
+nav a:active {
+    color: red;
+}
+
+/* main {
+flex-grow: 1;
+display:flex;
+flex-direction: column;
+align-items: center ;
+gap:1.5rem;
+padding: 1rem;
+} */
+
+footer {
+   bottom: 0;  
+}
+
+/* PROFILE CARD */
+.card {
+    scroll-margin-top: 8rem;
+    width: min(100%);
+    background-color: #cbd5e1;
+    border: 2px solid rebeccapurple; 
+    border-radius: 15px;
+    padding: 1rem;
+    display:block;
+    flex-direction:column;
+} 
+
+ .card:target {
+    border: 5px solid rebeccapurple;
+} 
+
+
+.card figure {
+    display:flex;
+    flex-flow:column ;  
+}
+
+.card img {
+    border: 1rem double #cbd5e1;
+    border-radius: 300px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), lime), url("/img/400PngdpiLogo.png");  
+}
+
+/* .card img:not([alt]) */
+.card img [alt] {
+    border: 10px double red;
+}
+
+.card:nth-child(odd) {
+    background-color: papayawhip;
+}
+
+/* odd 2 even */
+.card:nth-child(even) {
+    background-color:rebeccapurple , ;
+ }
+
+ .card figcaption {
+    font-weight: bold;
+    font-size: 2rem;
+    margin: 1rem;
+    text-align:center;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+   font-style:italic;
+} 
+
+/*.card figcaption::after {
+    content: ;
+    display: block;
+} */
+
+.card figcaption::first-line {
+    font-size: 3rem;
+}
+
+
+/* .card p {
+    position: relative;
+}  */
+
+/* .card p::before {
+    content: open-quote;
+    font-size: 3em;
+    position: absolute;
+    top: -0.25em;
+    left: -0.5;
+} */
+
+/* .card p::after {
+    content: open-quote;
+    font-size: 3em;
+    position: absolute;
+    top: -0.25em;
+    left: -0.5;
+} */
+
+/* .card figcaption::after {
+    content: ' hello how are you'
+} */
+
+ /* .card p::before {
+    content: open-quote; 
+}  */
+
+/* .card p::after {
+    content: close-quote;
+} */
+/* 
+
+SMALE
+@media screen and (min-width: 576px) {
+    main {
+        justify-content: center;
+        flex-flow: row wrap;
+        padding: 1rem;
+    }
+    .card {
+        width: min(100%, 400%);
+  }
+  .card:last-child {
+    order: -1;
+  }
+} 
+
+MEDIUM
+@media screen and (min-width: 768px) {
+   nav {
+    display: none;
+   } 
+   .card {
+    width: min(100%, 325px);
+   }
+.card figure {
+    flex-flow: column-reverse;
+}
+
+.card p {
+    margin-top:1rem;
+}
+}
+
+LARGE
+@media screen and (min-width: 992px) {
+   .card {
+    width:min(100%, 400px);
+   }
+   .card:nth-child(2) {
+    order: -1px;
+   }
+}
+
+    XL
+
+    @media screen and (min-width: 1200px) {
+       .card {
+        width: min(calc(33% - 1rem), 500px);
+       }
+    } */
+
+       MOBILE DEVICE LANDSCAPE
+/* 
+       @media screen and (max-height: 425px)
+       and (min-aspect-retio: 7/4) {
+           h1 {font-size: 1.5rem ;
+           }
+    
+        nav {
+            display: none;
+        }
+        main {
+            flex-grow: row nowrap;
+            justify-content: space-evenly;
+            justify-items: streatch;
+        }
+
+        .card {
+            width: min(calc(33% - 0.25rem), 200px);
+        }
+        .cardfigcaption, .card p {
+            font-size: 1.25rem;
+        }
+       } */
+
+        /* || FOOTER */
+    .footer {
+            padding: sticky;
+            bottom: O;
+			color: var(--HEADER-COLOR);
+            padding: var(--PADDING-TB) var(--PADDING-SIDE); 
+			margin-top: 1em;
+            padding-bottom: 0.7em;
+			text-align: center;
+			font-size: 0.9em;
+		}
+
+      
