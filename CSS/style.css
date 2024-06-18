@@ -66,7 +66,7 @@ nav {
 
 /* nav a:link,
 nav a, nav a:visited  */
-           =
+           
 nav a:any-link {
     color: #000;
 }
